@@ -9,7 +9,7 @@ st.title("Books You'ld Love to read!")
 book = st.text_input("Enter a book name")
 # book = input("Enter a title")
 
-with open('recommender_system/sim_test.pkl', 'rb') as file:
+with open('sim_test.pkl', 'rb') as file:
   sim_test = pickle.load(file)
 
 response = requests.get(f"https://www.googleapis.com/books/v1/volumes?q={book}")
